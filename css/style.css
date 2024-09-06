@@ -10,9 +10,13 @@
     --color-texto-claro: #ECFFE6;
     --color-texto-gray: rgb(59, 59, 59);
     --color-background: #2E073F;
-    --color-btns: #004aad;
+    /* --color-btns: #004aad; */
+    --color-btns: #ff076f;
     --color-titulos: #004aad;
     --padding-container : 50px 0px:
+    
+}
+body{
     
 }
 
@@ -21,6 +25,7 @@
     margin: 0 auto;
     overflow: hidden;
     font-family: "Roboto", sans-serif;
+    
 }
 
 /* Navbar */
@@ -36,7 +41,9 @@
 
 #logo-black{
     display: none;
+    
 }
+
 .nav:has(.nav_check:checked){
     --nav-icon-background : url("/assets/cerrar.svg");
     --transform-list-menu: translate(0);
@@ -46,8 +53,6 @@
     #logo-black{
         display: block;
     }
-    
-    
     
 }
 
@@ -103,6 +108,7 @@
 
 .cont-logo, .nav_label{
     z-index: 100;
+    
 }
 
 .--contacto{
@@ -110,25 +116,32 @@
     border-radius: 10px;
     padding: .5rem 1.5rem;
     text-decoration: none;
+    
 }
 
 .--contacto:hover{
     border-color: #797575;
     text-decoration: none;
+    transition: .3s ease;
 }
 
-/* section uno */
+/* section uno ----------------------- */
 
 .section-uno{
     padding: 40px 0px 30px 0px;
-    display: grid;
+    display: flex;
+    justify-content: center;
     gap: 1rem;
+    animation: anime-section1 1s;
     /* border:  1px solid gray; */
     
 }
 
+.section-uno #img-pc{
+    display: none;
+}
+
 .section1-text{
-    /* font-size: clamp(2rem, 4vw +1rem, 2.8rem); */
     font-size: 1.6rem;
     text-align: center;
     color: var(--color-titulos);
@@ -137,6 +150,9 @@
 .img-sectionUno{
     width: min(100%, 300px);
     justify-self: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    
 }
 
 .parrafo-sectionUno{
@@ -146,6 +162,12 @@
     color: var(--color-texto-gray);
     
 }
+.parrafo-sectionUno span{
+    color: rgb(80, 78, 78);
+}
+.parrafo-sectionUno a{
+    color: var(--color-titulos);
+}
 
 .--ancla{
     background-color: var(--color-btns);
@@ -154,19 +176,105 @@
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
-    margin: 10px 0px;
+    margin: 30px 0px 10px 0px;
+    transition: .3s ease-in-out;
+
 }
 
 .--ancla:hover{
     background-color: #1253b6;
 }
 
+/* SECTION2 SLIDER ---------------------*/
+.section2-slider{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section2-icons{
+    display: flex;
+    overflow: hidden;
+}
+.section2-icons img{
+    margin: 0px 50px;
+    animation: rotar 15s linear infinite ;
+    transition: .3s ease-in-out;
+   
+}
+
+
+
+
 @media (width >= 768px){
-    .ection-uno{
+
+    .nav__list{
+        background-color: transparent;
+        
+    }
+    .nav_link{
+        color: #004aad;
+        font-weight: 450;
+    }
+    .section1-text{
+        margin-bottom: 40px;
+    }
+    .--contacto:hover{
+        border-color: var(--color-btns);
+        text-decoration: none;
+        
+    }
+    .nav_link:hover{
+       text-decoration: none;
+       color: var(--color-btns);
+       transition: .2s all ;
+    }
+
+    /* SECTOON UNO */
+
+    .section-uno{
+        display: flex;
+        /* text-align: center; */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cont-section-uno{
+        width: 60%;
+        margin-right: 20px;
+    }
+    .section1-text{
+        text-align: start;
+        margin-bottom: 15px;
+    }
+    #img-cel{
+        display: none;
+    }
+    .section-uno #img-pc{
+        display: block;
+        /* border: 1px solid ; */
+        width: 35%;
+    }
+    .parrafo-sectionUno{
+        font-size: 1.2rem;
+        line-height: 2;
+        text-align: justify;
+        color: var(--color-texto-gray);
+        /* border: 1px solid greenyellow; */
+        margin-top: 0px;
+        
+    }
+    .--ancla{
+        display: inline-block;
+        padding: 10px 30px;
+    }
+
+    
+    
+    /* .ection-uno{
         padding: var(--padding-container);
         gap: 1rem;
-
-    }
+    } */
 
 }
 
@@ -189,3 +297,41 @@
 
     
 }
+
+/* ANIMACION PARA EL BODY */
+
+@keyframes anime-section1{
+    0%{
+        
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+/* SLIDER ROTAR -------------------- */
+@keyframes rotar{
+    0%{
+        transform: translateX(640px);
+    }
+    
+    100%{
+        transform: translateX(-640px);
+    }
+}
+
+/* @keyframes animelogo{
+    0%{
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+} */
