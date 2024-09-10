@@ -336,7 +336,6 @@ body{
 }
 
 form{
-    
     margin: 0 auto;
     padding: 15px;
     border-radius: 10px;
@@ -536,7 +535,7 @@ footer{
     /* SECTION ESTUDIOS --------- */
 
     .section-estudios{
-        border: 1px solid red;
+        
         padding-top: 100px;
         background-color: var(--color-primario);
     }
@@ -545,6 +544,34 @@ footer{
     /* SECTION FORMULARIO DE CONTACTO --------- */
     .section-form{
         background-color: var(--color-primario);
+        /* background-color: #1253b6; */
+        display: flex; 
+        padding: 50px 30px;
+        overflow: hidden;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .form-container{
+        /* border: 1px solid greenyellow; */
+        width: 45%;
+    }
+    form{
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: white; 
+        
+    }
+    .img-form{
+        display: inline-flex;
+        width: 35%;
+        justify-self: center;
+        /* margin: 0 auto;
+        margin-bottom: 15px; */
+        animation: aparecer 1.5s;
+        
+        
     }
     
 
