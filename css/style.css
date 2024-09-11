@@ -191,7 +191,9 @@ body {}
 }
 
 /* SECTION2 SLIDER ---------------------*/
-
+.section2-slider{
+    padding: 20px 0px;
+}
 .section2-icons {
     display: flex;
     overflow: hidden;
@@ -210,6 +212,10 @@ body {}
     transition: .3s ease;
 }
 
+.wave2{
+    /* background-color: #1253b6; */
+    background-color: var(--color-primario);
+}
 .wave1 #img-white {
     display: none;
     transition: .3s ease;
@@ -249,6 +255,7 @@ body {}
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px ;
 }
 
 .cards-img {
@@ -257,26 +264,31 @@ body {}
     /* margin: 10px 0px; */
     text-align: center;
     border-radius: 15px;
+
 }
 
 .cards-img img {
     width: 100%;
     transition: .2s ease-in-out;
     border-radius: 10px;
-
+    box-shadow: 20px 30px 15px 10px rgb(99, 97, 97);
 }
 
 .cards-img img:hover {
     transform: scale(1.2);
 }
 
+#wave-center-white{
+    display: none;
+}
+
 /* SECTION DE ESTUDIOS -----------*/
 .section-estudios {
     margin-top: -10px;
     background-color: #1253b6;
-    padding: 30px;
+    padding: 50px 30px 60px 30px;
     font-family: "Roboto", sans-serif;
-
+    
 }
 
 .title-estudios {
@@ -348,9 +360,9 @@ body {}
 
 .section-form {
     background-color: #1253b6;
-    padding: 60px 30px 30px 30px;
+    padding: 60px 30px 80px 30px;
     font-family: "Roboto", sans-serif;
-
+   
 }
 
 form {
@@ -358,6 +370,11 @@ form {
     padding: 15px;
     border-radius: 10px;
     background-color: white;
+    transition: .1s ease-in-out;
+    
+}
+form:hover{
+    border-color: #e40b82;
 }
 
 .title-form {
@@ -373,6 +390,12 @@ form {
     border-radius: 5px;
     border: none;
     border: 1px solid gray;
+}
+.form-imputs input:hover{
+    border-color: #1253b6;
+}
+textarea:hover{
+    border-color: #1253b6;
 }
 
 form label {
@@ -417,14 +440,41 @@ textarea {
 
 .img-form {
     display: none;
+    transition: .3s ease-in-out;
+}
+.img-form:hover{
+   scale: 1.2;
+    
 }
 
 
 
 footer {
     background-color: var(--color-primario);
-    padding: 100px 0px;
+    padding: 100px 30px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    
 }
+.container-footer{
+    /* border: 1px solid ; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-footer .addres{
+    /* border: 1px solid green; */
+    
+}
+.container-footer .addres-items{
+    display: flex;
+    align-items: center;
+    margin: 7px 0px;
+}
+.container-footer .addres-items img{
+    margin-right: 10px;
+}
+
 
 
 @media (width >=768px) {
@@ -529,16 +579,38 @@ footer {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
+       
     }
 
     .main-cards a {
         width: 95%;
-        margin: 0px 10px;
-
+        margin: 5px 10px;
+        border-right: 3px solid white;
+        border-radius: 10px ;
+    }
+    .main-cards a img {
+        box-shadow: 20px 30px 15px 10px white;
+        
     }
 
     /* SECTION2 IMG SLIDER ---------------*/
+
+    .section2-slider{
+        /* border: 1px solid red; */
+        padding: 20px 0px 50px 0px;
+    }
+    .section2-icons {
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .section2-icons img {
+        margin: 0px 50px;
+        animation: rotar 30s linear infinite;
+        transition: .3s ease-in-out;
+    
+    }
+
     .section2-icons img {
         margin: 0px 50px;
         animation: rotar 50s linear infinite;
@@ -556,11 +628,16 @@ footer {
 
     .wave1 #img-white {
         display: flex;
+        
     }
 
-    #wave-bootom {
+    #wave-center{
         display: none;
     }
+    /* #wave-center-white{
+        display: block;
+        border: 1px solid red ;
+    } */
 
     .section-contacto,
     footer {
@@ -571,40 +648,38 @@ footer {
     /* SECTION ESTUDIOS --------- */
 
     .section-estudios {
-
-        padding-top: 100px;
+        padding-top: 70px;
         /* background-color: var(--color-primario); */
     }
 
 
     /* SECTION FORMULARIO DE CONTACTO --------- */
     .section-form {
-        /* background-color: var(--color-primario); */
-        /* background-color: #1253b6; */
         display: flex;
-        padding: 50px 30px;
+        padding: 50px 30px 70px 30px;
         overflow: hidden;
         justify-content: space-between;
         align-items: center;
-
+       
     }
 
     .form-container {
         /* border: 1px solid greenyellow; */
         width: 45%;
-    }
+        
+    }   
 
     form {
         margin: 0 auto;
         padding: 15px;
         border-radius: 10px;
         background-color: white;
-
+        border-bottom: 2px solid;
     }
 
     .img-form {
         display: inline-flex;
-        width: 35%;
+        width: 38%;
         justify-self: center;
         /* margin: 0 auto;
         margin-bottom: 15px; */
