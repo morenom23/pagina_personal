@@ -292,7 +292,7 @@ body {}
 }
 
 .title-estudios {
-    color: var(--color-texto-claro);
+    color: white;
     font-size: 1.6rem;
 }
 
@@ -302,7 +302,7 @@ body {}
 }
 
 .details-estudios {
-    background-color: var(--color-texto-claro);
+    background-color: white;
     border-radius: 10px;
     padding: 10px;
     border: 1px solid black;
@@ -313,7 +313,7 @@ body {}
 }
 
 .details-estudios[open] {
-    background-color: var(--color-texto-claro);
+    background-color: white;
     --icon-estudios-url: url("/assets/-.svg");
 
     .summary-estudios {
@@ -451,28 +451,40 @@ textarea {
 
 footer {
     background-color: var(--color-primario);
-    padding: 100px 30px;
+    padding: 70px 30px 40px 30px;
     color: white;
     font-family: "Roboto", sans-serif;
-    
 }
 .container-footer{
-    /* border: 1px solid ; */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
+.container-footer a{
+    
+    padding-left: 20px;
+}
 .container-footer .addres{
-    /* border: 1px solid green; */
+    
+    margin-top: 60px;
     
 }
 .container-footer .addres-items{
     display: flex;
     align-items: center;
     margin: 7px 0px;
+    
 }
 .container-footer .addres-items img{
     margin-right: 10px;
+    
+}
+
+.copy{
+    
+    margin: 30px 0px;
+    text-align: center;
 }
 
 
