@@ -966,8 +966,10 @@ footer .foot-redes{
     100% {
         transform: translateY(0px);
         opacity: 1;
+        
     }
 }
+
 
 /* SLIDER ROTAR -------------------- */
 @keyframes rotar {
