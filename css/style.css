@@ -17,7 +17,9 @@
     --padding-container: 50px 0px:
 }
 
-body {}
+html{
+    scroll-behavior: smooth;
+}
 
 .container {
     width: min(90%, 1200px);
