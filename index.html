@@ -39,10 +39,10 @@
             <a href="#estudios" class="nav_link">Estudios</a>
           </li>
           <li class="nav_anclas">
-            <a href="#" class="nav_link">Proyectos</a>
+            <a href="#Proyectos" class="nav_link">Proyectos</a>
           </li>
           <li class="nav_anclas">
-            <a href="#" class="nav_link --contacto">Contacto</a>
+            <a href="#sectionForm" class="nav_link --contacto">Contacto</a>
           </li>
         </ul>
       </nav>
@@ -63,7 +63,7 @@
               herramientas como VsCode, GitHub. </b></span><br>
           Estoy emocionado por la oprtunidad de aplicar mis conocimientos en un entorno profesional, contribuir a
           proyectos innovadores y sobre todo, aprender de la mano de equipos experimentados.<br> Aquí encontrarás <a
-            href="">mis proyectos,</a> y estudios. ¡Explora y hablemos para crear juntos algo increíble!
+            href="" id="redirigeProyectos">mis proyectos,</a> y estudios. ¡Explora y hablemos para crear juntos algo increíble!
         </p>
 
         <a href="/docs/CCV2024-desarrollo-web.pdf" class="section-uno --ancla">Download CV</a>
@@ -82,11 +82,11 @@
     <img src="/assets/wave2.svg" id="img-azul">
     <img src="/assets/waveWhite-pc.svg" id="img-white">
     <center>
-      <h2 class="title-proyectos">Proyectos Personales</h2>
+      <h2 class="title-proyectos" id="Proyectos">Proyectos Personales</h2>
     </center>
 
     <div class="container">
-      <main class="section-main">
+      <main class="section-main" >
         <!-- <h2 class="title-proyectos">
           Proyectos Personales
         </h2> -->
@@ -207,31 +207,46 @@
 
   </section>
 
-  <section class="section-form">
+  <section class="section-form" id="sectionForm">
     <div class="form-container">
       <div class="head-form">
         <h2 class="title-form">
           Contacto
         </h2>
       </div>
-      <form action="">
+      <form action="" id="miFormulario">
         <div class="form-imputs">
           <label for="">Nombre</label>
-          <input type="text" placeholder="Ingrese su nombre">
+          <input type="text" id="nombre" required placeholder="Ingrese su nombre">
         </div>
 
         <div class="form-imputs">
           <label for="">Correo</label>
-          <input type="email" placeholder="Ingrese su correo">
+          <input type="email" id="correo" required placeholder="Ingrese su correo">
         </div>
 
         <div class="text-area">
           <label for="">Mensaje</label>
-          <textarea name="" placeholder="Mensaje..."></textarea>
+          <textarea id="mensaje" placeholder="Mensaje..."></textarea>
         </div>
 
         <input type="submit" value="Enviar mensaje" class="btn-form">
       </form>
+      <div class="caja_btn_verMensaje">
+        <button id="verInformacion">Ver Datos</button>
+      </div>
+      <table id="tablaResultados" border="1" style="margin-top: 20px; display: none;">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Mensaje</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+    </table>
+    <button id="cerrarTabla" style="display: none;">Cerrar Vista</button>
+      
     </div>
 
     <figure class="img-form">
@@ -259,13 +274,13 @@
                 <a href="#" class="a-foot">Inicio</a>
               </li>
               <li class="li-foot">
-                <a href="#" class="a-foot">Estudios</a>
+                <a href="#estudios" class="a-foot">Estudios</a>
               </li>
               <li class="li-foot">
-                <a href="#" class="a-foot">Proyectos</a>
+                <a href="#Proyectos" class="a-foot">Proyectos</a>
               </li>
               <li class="li-foot">
-                <a href="#" class="a-foot --cta">Contacto</a>
+                <a href="#sectionForm" class="a-foot --cta">Contacto</a>
               </li>
             </ul>
           </div>
@@ -275,13 +290,13 @@
                 <a href="#" class="a-foot">Inicio</a>
               </li>
               <li class="li-foot">
-                <a href="#" class="a-foot">Estudios</a>
+                <a href="#estudios" class="a-foot">Estudios</a>
               </li>
               <li class="li-foot">
-                <a href="#" class="a-foot">Proyectos</a>
+                <a href="#Proyectos" class="a-foot">Proyectos</a>
               </li>
               <li class="li-foot">
-                <a href="#" class="a-foot --cta">Contacto</a>
+                <a href="#sectionForm" class="a-foot --cta">Contacto</a>
               </li>
             </ul>
           </div>
